@@ -1,3 +1,5 @@
+- 1 DATI VOLO -------------------
+IDDatiVolo
 Data Partenza
 Ora Partenza
 Partenza
@@ -9,3 +11,28 @@ AreaCheckIn
 AreaGate
 Gate
 Note
+---------------------------------
+
+- 2 DATI AEREI ------------------
+IDDatiAerei
+Produttore
+Modello
+Sigla
+---------------------------------
+
+- 3 AEROPORTI -------------------
+IDAeroporto
+Citta
+NomeAeroporto
+NazioneAeroporto
+CodiceIcao
+CodiceIATA
+---------------------------------
+
+- 4 STATO VOLO ------------------
+IDStatoVolo
+Stato
+---------------------------------
+
+- 9 LINK E RIFERIMENTI ----------
+http://it.aviationcodes.com/index.php?p=iap
