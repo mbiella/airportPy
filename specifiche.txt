@@ -1,0 +1,11 @@
+Data Partenza
+Ora Partenza
+Partenza
+Destinazione
+Numero Volo
+Aereo
+Stato
+AreaCheckIn
+AreaGate
+Gate
+Note
