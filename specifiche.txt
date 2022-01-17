@@ -11,6 +11,7 @@ AreaCheckIn
 AreaGate
 Gate
 Note
+IDCompagnia
 ---------------------------------
 
 - 2 DATI AEREI ------------------
@@ -18,6 +19,7 @@ IDDatiAerei
 Produttore
 Modello
 Sigla
+IDCompagnia
 ---------------------------------
 
 - 3 AEROPORTI -------------------
@@ -34,5 +36,14 @@ IDStatoVolo
 Stato
 ---------------------------------
 
+- 5 Compagnie -------------------
+IDCompany
+companyName
+companyCode
+---------------------------------
+
 - 9 LINK E RIFERIMENTI ----------
 http://it.aviationcodes.com/index.php?p=iap
+https://www.milanolinate-airport.com/it/voli/partenze
+https://it.flightaware.com/
+http://www.vittal.it/wp-content/uploads/2016/12/sqlite.pdf

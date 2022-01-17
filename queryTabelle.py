@@ -1,0 +1,31 @@
+executeSQL('CREATE TABLE FlyState(IDFlyState, flyState)', cur)
+executeSQL('CREATE TABLE Airports(IDAirport, airportCity, airportName, airportNation, ITATACode, ICAOCode)', cur)
+executeSQL('CREATE TABLE Company(IDCompany, companyName, companyCode)', cur)
+executeSQL('CREATE TABLE AirplanesData(IDAirplane, airplaneManufacturer, airplaneModel, airplaneSign)', cur)
+executeSQL('UPDATE TABLE FlyDates(IDFlyData, flyDate, flyTime, flyDepartureID, flyDestinationID, flyIDCompany, flyNumber, flyAirplaneID, flyStateID, flyCheckInArea, flyGateArea, flyGate, FlyNote)', cur)
+
+executeSQL('ALTER TABLE FlyDates ADD Company', cur)
+executeSQL('ALTER TABLE FlyDates DROP COLUMN Company', cur)
+executeSQL("ALTER TABLE AirplanesData RENAME COLUMN Company TO IDCompany;", cur)
+
+executeSQL("INSERT INTO flyState VALUES(1, 'Boarding')", cur)
+executeSQL("INSERT INTO flyState VALUES(2, 'Landed')", cur)
+executeSQL("INSERT INTO flyState VALUES(3, 'Delay')", cur)
+executeSQL("INSERT INTO flyState VALUES(4, 'Take Off')", cur)
+executeSQL("INSERT INTO flyState VALUES(5, 'Call')", cur)
+executeSQL("INSERT INTO flyState VALUES(6, 'Last Call')", cur)
+executeSQL("INSERT INTO flyState VALUES(7, 'CheckIn Open')", cur)
+executeSQL("INSERT INTO flyState VALUES(8, 'CheckIn Closed')", cur)
+executeSQL("INSERT INTO flyState VALUES(9, 'Cancelled')", cur)
+
+executeSQL("INSERT INTO Airports VALUES(1, 'Milano', 'Linate', 'Italia', 'LIML', 'LIN')", cur)
+executeSQL("INSERT INTO Airports VALUES(2, 'Milano', 'Malpensa', 'Italia', 'LIMC', 'MXP')", cur)
+executeSQL("INSERT INTO Airports VALUES(3, 'Roma', 'Fiumicino', 'Italia', 'LIRF', 'FCO')", cur)
+executeSQL("INSERT INTO Airports VALUES(4, 'Cagliari', 'Elmas', 'Italia', 'LIEE', 'CAG')", cur)
+executeSQL("INSERT INTO Airports VALUES(5, 'Genova', 'Cristoforo Colombo', 'Italia', 'LIMJ', 'GOA')", cur)
+
+executeSQL("INSERT INTO AirplanesData VALUES(1, 'AIRBUS', 'A320neo', 'I-MLBC', 'AIR CANADA')", cur)
+executeSQL("INSERT INTO AirplanesData VALUES(2, 'AIRBUS', 'A320neo', 'I-MB01', 'AIR ALASKA')", cur)
+
+executeSQL("INSERT INTO Company VALUES(1, 'AIR CANADA', 'ACA')", cur)
+executeSQL("INSERT INTO Company VALUES(2, 'AIR ALASKA', 'ASA')", cur)
