@@ -3,8 +3,7 @@ from database import *
 con = creaConn()
 cur = creaCursor(con)
 
-executeSQL("INSERT INTO AirplanesData VALUES(1, 'AIRBUS', 'A320neo', 'I-MLBC', 1)", cur)
-executeSQL("INSERT INTO AirplanesData VALUES(2, 'AIRBUS', 'A320neo', 'I-MB01', 2)", cur)
+#executeSQL("INSERT INTO FlyDates VALUES(1, '20220120', '1255', 1, 3, 2, 'AA238', 2, 7, 'B', 'B', 12, 'Nessuna')", cur)
 
 print("Dati Aerei -----------")
 for row in cur.execute('SELECT * from AirplanesData'):
@@ -27,24 +26,27 @@ for row in cur.execute('SELECT * from FlyState'):
     print(row)
 
 
+print("VOLO -----------")
+#SELECT * FROM FlyDates as F join Airports as AS ON 
+
 
 con.commit()
 cur.close()
 con.close()
 
 '''
-IDDatiVolo
-Data Partenza
-Ora Partenza
-Partenza
-Destinazione
-Numero Volo
-Aereo
-Stato
-AreaCheckIn
-AreaGate
-Gate
-Note
-Compagnia
+IDFlyData, 
+flyDate, 
+flyTime, 
+flyDepartureID, 
+flyDestinationID, 
+flyIDCompany, 
+flyNumber, 
+flyAirplaneID, 
+flyStateID, 
+flyCheckInArea, 
+flyGateArea, 
+flyGate, 
+FlyNote
 '''
 
