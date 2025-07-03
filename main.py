@@ -25,7 +25,7 @@ def printInfo():
     print("Stati -----------")
     for row in cur.execute('SELECT * from FlyState'):
         print(row)
-    print("VOLO -----------")
+    print("Num VOLO -----------")
     for row in cur.execute('select F.flyDate as Date, F.flyTime as Time, A.airportName as Departure,A2.airportName as Destination, F.flyNumber as Fly_Number, P.airplaneModel,FS.flyState,flyCheckInArea,flyGateArea,flyGate, C.companyName from FlyDates as F join Airports as A on F.flyDepartureID = A.IDAirport join Airports as A2 on F.flyDestinationID = A2.IDAirport join AirplanesData as P on F.flyAirplaneID = P.IDAirplane join FlyState FS on F.flyStateID = IDFlyState join Company as C on P.IDCompany = C.IDCompany'):
         print(row)
  
