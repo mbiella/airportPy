@@ -6,7 +6,7 @@ cur = creaCursor(con)
 #executeSQL("INSERT INTO FlyDates VALUES(1, '20220120', '1255', 1, 3, 2, 'AA238', 2, 7, 'B', 'B', 12, 'Nessuna')", cur)
 
 def printInfo():
-    print("Dati Aerei -----------")
+    '''print("Dati Aerei -----------")
     for row in cur.execute('SELECT * from AirplanesData'):
         print(row)
 
@@ -20,7 +20,7 @@ def printInfo():
 
     print("Voli -----------")
     for row in cur.execute('SELECT * from FlyDates'):
-        print(row)
+        print(row)'''
 
     print("Stati -----------")
     for row in cur.execute('SELECT * from FlyState'):
