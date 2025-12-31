@@ -7,7 +7,7 @@ cur = creaCursor(con)
 
 def printInfo():
     print('****************** AIRPORT v. 1.0 ******************')
-    '''print("Dati Aerei -----------")
+    print("Dati Aerei -----------")
     for row in cur.execute('SELECT * from AirplanesData'):
         print(row)
 
@@ -21,7 +21,7 @@ def printInfo():
 
     print("Voli -----------")
     for row in cur.execute('SELECT * from FlyDates'):
-        print(row)'''
+        print(row)
 
     print("Stati -----------")
     for row in cur.execute('SELECT * from FlyState'):
