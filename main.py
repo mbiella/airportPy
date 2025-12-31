@@ -39,6 +39,7 @@ while(1):
     if(res=='y'):
         fly=input("Numero del volo?: ")
         st=input("Nuovo stato (1-9)?")
+        print("UPDATE flyDates set flyStateID=" + st + " WHERE flyNumber='" + fly + "'")
         cur.execute("UPDATE flyDates set flyStateID=" + st + " WHERE flyNumber='" + fly + "'")
         con.commit()
         printInfo()
