@@ -8,20 +8,20 @@ cur = creaCursor(con)
 def printInfo():
     print('****************** AIRPORT v. 1.0 ******************')
     print("Dati Aerei -----------")
-    for row in cur.execute('SELECT * from AirplanesData'):
-        #print(row)
+    '''for row in cur.execute('SELECT * from AirplanesData'):
+        print(row)
 
     print("Aeroporti -----------")
     for row in cur.execute('SELECT * from Airports'):
-        #print(row)
+        print(row)
 
     print("Compagnie -----------")
     for row in cur.execute('SELECT * from Company'):
-        #print(row)
+        print(row)
 
     print("Voli -----------")
     for row in cur.execute('SELECT * from FlyDates'):
-        #print(row)
+        print(row)'''
 
     print("Stati -----------")
     for row in cur.execute('SELECT * from FlyState'):
